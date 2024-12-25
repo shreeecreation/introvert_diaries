@@ -18,3 +18,4 @@ export 'network/network_info.dart';
 export 'routes/routes.dart';
 export 'session/session.dart';
 export 'theme/theme.dart';
+export 'pagination_model.dart';

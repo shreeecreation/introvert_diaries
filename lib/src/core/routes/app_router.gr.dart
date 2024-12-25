@@ -9,7 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i3;
-import 'package:introvertdiaries/src/features/auth/presentation/login_page.dart'
+import 'package:introvertdiaries/src/features/auth/presentation/pages/login_page.dart'
     as _i1;
 import 'package:introvertdiaries/src/features/splash_page.dart' as _i2;
 
@@ -19,7 +19,7 @@ abstract class $AppRouter extends _i3.RootStackRouter {
   @override
   final Map<String, _i3.PageFactory> pagesMap = {
     LoginRoute.name: (routeData) {
-      return _i3.AutoRoutePage<dynamic>(
+      return _i3.AutoRoutePage<void>(
         routeData: routeData,
         child: const _i1.LoginPage(),
       );

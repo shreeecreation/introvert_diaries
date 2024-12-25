@@ -1,45 +1,40 @@
 import 'package:equatable/equatable.dart';
+import 'package:introvertdiaries/src/core/core.dart';
 
 class ApiResponse<T> extends Equatable {
   const ApiResponse({
+    required this.success,
     required this.data,
-    required this.detail,
-    this.nonFieldErrors,
+    required this.message,
     this.responseType,
-    this.count,
-    this.next,
-    this.previous,
+    this.pagination,
   });
 
   factory ApiResponse.fromJson(Map<String, dynamic> json) {
     return ApiResponse(
-      data: json['results'] as T,
-      detail: json['details'] as String?,
+      success: json['success'] as bool,
+      data: json['data'] as T,
+      message: json['message'] as String?,
       responseType: json['responseType'] as String?,
-      nonFieldErrors: json['non_field_errors'] as List<String>?,
     );
   }
 
-  final String? detail;
+  final bool success;
+  final String? message;
   final T data;
   final String? responseType;
-  final List<String>? nonFieldErrors;
-  final int? count;
-  final String? next;
-  final String? previous;
+  final PaginationModel? pagination;
 
   @override
-  List<Object?> get props => [detail, data, responseType];
+  List<Object?> get props => [success, message, data, responseType];
 
+  // tojson
   Map<String, dynamic> toJson() {
     return {
-      'details': detail,
+      'success': success,
+      'message': message,
       'data': data,
       'responseType': responseType,
-      'non_field_errors': nonFieldErrors,
-      'count': count,
-      'next': next,
-      'previous': previous,
     };
   }
 }
