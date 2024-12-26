@@ -1,12 +1,10 @@
-import 'package:flutter/material.dart' hide showSearch;
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:introvertdiaries/src/core/core.dart';
 import 'package:introvertdiaries/src/features/auth/auth.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
-import '../cubit/get_country_picker_provider.dart';
 
 class CountryPicker extends HookWidget {
-  CountryPicker._(this.selectedCountry);
+  const CountryPicker._(this.selectedCountry);
 
   final CountryModel? selectedCountry;
 
@@ -17,12 +15,6 @@ class CountryPicker extends HookWidget {
       context.read<CountryInfoCubit>().clearSearch();
       return null;
     }, []);
-    // searchController.addListener(() {
-    //   ref
-    //       .read(countryPickerNotifierProvider(context).notifier)
-    //       .search(searchController.text);
-    // });
-    // final reference = ref.watch(countryPickerNotifierProvider(context));
     return BlocBuilder<CountryInfoCubit, CountryInfoState>(
       builder: (context, state) => state.maybeWhen(
         error: (error) => Container(

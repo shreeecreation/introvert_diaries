@@ -116,12 +116,12 @@ class AppTheme {
 
   ThemeData get darkTheme => ThemeData(
         primaryColor: AppColors.primaryColor,
-        scaffoldBackgroundColor: AppColors.darkBlue,
+        scaffoldBackgroundColor: AppColors.textBlue,
         textTheme: GoogleFonts.rubikTextTheme(
           ThemeData.dark().textTheme,
         ),
         dividerColor: AppColors.black,
-        cardColor: AppColors.darkBlue,
+        cardColor: AppColors.textBlue,
         primarySwatch: Colors.blue,
         useMaterial3: true,
         fontFamily: GoogleFonts.rubik().fontFamily,
@@ -135,7 +135,7 @@ class AppTheme {
           dragHandleColor: AppColors.tileColorDark,
         ),
         appBarTheme: const AppBarTheme(
-          backgroundColor: AppColors.darkBlue,
+          backgroundColor: AppColors.textBlue,
           elevation: 0,
           centerTitle: false,
           iconTheme: IconThemeData(color: AppColors.white),

@@ -84,12 +84,13 @@ class CustomTextField extends StatelessWidget {
         DecoratedBox(
           decoration: BoxDecoration(borderRadius: radius),
           child: TextFormField(
+            
             validator: validator,
             focusNode: focusNode,
             autofocus: autoFocus ?? false,
             inputFormatters: inputFormatters,
             obscureText: isPasswordField,
-            style: labelStyle ?? AppTextStyles.text14PxMedium.primary,
+            style: labelStyle ?? AppTextStyles.text16PxMedium.primary,
             obscuringCharacter: '⦁',
             controller: controller,
             keyboardType: inputType,
@@ -103,12 +104,13 @@ class CustomTextField extends StatelessWidget {
             textCapitalization: textCapitalization ?? TextCapitalization.none,
             readOnly: readOnly,
             decoration: InputDecoration(
+              
               filled: true,
               fillColor: fillColor,
               contentPadding: fieldContentPadding ??
                   const EdgeInsets.symmetric(
                     horizontal: 20,
-                    vertical: 15,
+                    vertical: 21,
                   ),
               border: OutlineInputBorder(
                 borderRadius: radius,
@@ -147,7 +149,7 @@ class CustomTextField extends StatelessWidget {
               prefixIcon: prefixIcon != null
                   ? fieldContentPadding != null
                       ? SizedBox(
-                          height: 50,
+                          // height: 50,
                           child: Padding(
                             padding: const EdgeInsets.all(11),
                             child: Row(
@@ -176,7 +178,7 @@ class CustomTextField extends StatelessWidget {
                   : null,
               labelText: labelText,
               labelStyle: labelStyle ??
-                  AppTextStyles.text14PxMedium.copyWith(
+                  AppTextStyles.text16PxMedium.copyWith(
                     color: AppColors.primaryColor,
                   ),
               hintStyle: hintStyle ??

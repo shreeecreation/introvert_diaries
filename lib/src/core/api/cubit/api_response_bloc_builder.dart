@@ -60,14 +60,14 @@ class ApiResponseBlocBuilder<C extends Cubit<BaseApiState<T>>, T> extends BlocBu
             child: Text('No internet connection'),
           ).toSliverBox;
         },
-        orElse: () => SizedBox.shrink().toSliverBox,
+        orElse: () => const SizedBox.shrink().toSliverBox,
       );
     }
 
     return state.maybeWhen(
       success: (response) => successBuilder(context, response),
       error: (error) => Center(child: Text(error)),
-      loading: () => Center(
+      loading: () => const Center(
         child: CircularProgressIndicator(),
       ),
       noInternet: () => const Center(child: Text('No internet connection')),

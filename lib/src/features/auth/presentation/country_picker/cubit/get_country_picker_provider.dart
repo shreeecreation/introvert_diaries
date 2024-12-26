@@ -28,7 +28,7 @@ class CountryInfoCubit extends Cubit<CountryInfoState> {
       _countryCode = (await Devicelocale.currentAsLocale)?.countryCode;
       final response =
           await DefaultAssetBundle.of(_appRouter.navigatorKey.currentContext!)
-              .loadString('assets/json/country_info.json');
+              .loadString('assets/country_info.json');
       final data = jsonDecode(response) as List<dynamic>;
       final _countries = List<CountryModel>.from(data
           .map((data) => CountryModel.fromJson(data as Map<String, dynamic>)));
@@ -52,7 +52,7 @@ class CountryInfoCubit extends Cubit<CountryInfoState> {
         _countryCode ?? WidgetsBinding.instance.window.locale.countryCode;
     final _country = searchedCountry.firstWhere(
         (element) => element.code.toLowerCase() == countryCode!.toLowerCase(),
-        orElse: () => countries.first);
+        orElse: () => countries.first,);
     return _country;
   }
 

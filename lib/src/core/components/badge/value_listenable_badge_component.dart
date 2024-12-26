@@ -62,7 +62,7 @@ class _ValueListenableBadgeComponentState
                         : widget.badgeDisabledColor,
                     textColor: selectedIndex.value == index
                         ? AppColors.white
-                        : AppColors.tileGrey,
+                        : AppColors.textGrey,
                     title: widget.status[index] as String,
                     borderColor: AppColors.border,
                   ).px(4),

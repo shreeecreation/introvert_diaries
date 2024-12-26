@@ -5,7 +5,7 @@ class BadgeComponent extends StatelessWidget {
   const BadgeComponent({
     required this.title,
     super.key,
-    this.color = AppColors.greyColor,
+    this.color = AppColors.textGrey,
     this.textColor = AppColors.black,
     this.borderColor = AppColors.transparent,
   });

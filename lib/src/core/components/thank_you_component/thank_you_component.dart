@@ -42,7 +42,7 @@ class ThankYouComponentPage extends StatelessWidget {
               label: buttonText,
               textColor: AppColors.black,
               labelStyle: AppTextStyles.text14PxSemiBold,
-              borderColor: AppColors.tileGrey,
+              borderColor: AppColors.greyColor,
               isDisabled: false,
               fullWidth: true,
               height: 40,

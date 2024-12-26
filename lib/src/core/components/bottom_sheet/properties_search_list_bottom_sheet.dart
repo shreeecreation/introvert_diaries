@@ -57,12 +57,12 @@ class PropertiesSearchListBottomSheet extends StatelessWidget {
                       Text(
                         properties[index],
                         style: index == 0
-                            ? AppTextStyles.text13PxMedium.textBlueFile
+                            ? AppTextStyles.text13PxMedium
                             : AppTextStyles.text14PxMedium,
                       ),
                       15.verticalSpace,
                       const Divider(
-                        color: AppColors.greyColor,
+                        color: AppColors.textGrey,
                       ),
                     ],
                   );

@@ -38,7 +38,7 @@ class TimeBottomSheet extends StatelessWidget {
                       ),
                       15.verticalSpace,
                       const Divider(
-                        color: AppColors.greyColor,
+                        color: AppColors.textGrey,
                       ),
                     ],
                   );

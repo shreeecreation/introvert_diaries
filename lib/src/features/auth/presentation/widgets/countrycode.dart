@@ -12,15 +12,17 @@ class CountryCode extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 78,
-      // height: 56,
-      child: CustomTextField(
+      height: 80,
+      child: CustomTextField
+      (
+        
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(8),
           bottomLeft: Radius.circular(8),
         ),
 
         controller: controller,
-        fieldContentPadding: const EdgeInsets.all(17.5),
+        fieldContentPadding: const EdgeInsets.all(21),
         onTap: () async {
           final response = await CountryPicker.show(context, selectedCountry: selectedCountry);
           if (response != null) {
