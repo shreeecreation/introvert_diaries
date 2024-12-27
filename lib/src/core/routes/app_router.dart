@@ -24,5 +24,8 @@ class AppRouter extends $AppRouter {
       page: LoginRoute.page,
       path: AppRoutes.loginPage,
     ),
+
+    AutoRoute(page: HomeRoute.page,
+    path: AppRoutes.homePage,),
   ];
 }

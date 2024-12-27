@@ -7,8 +7,8 @@ class CustomButton extends StatelessWidget {
     required this.label,
     required this.onPressed,
     super.key,
-    this.backgroundColor = AppColors.lightPrimary,
-    this.disabledColor = AppColors.lightPrimary,
+    this.backgroundColor = AppColors.primaryColor,
+    this.disabledColor = AppColors.greyColor,
     this.splashColor = AppColors.transparent,
     this.labelStyle,
     this.textColor = AppColors.white,
@@ -195,7 +195,7 @@ class CustomButton extends StatelessWidget {
 
 class _ButtonLoading extends StatelessWidget {
   const _ButtonLoading({
-    this.loadingColor = AppColors.white,
+    this.loadingColor = AppColors.primaryColor,
   });
 
   final Color loadingColor;
@@ -207,6 +207,7 @@ class _ButtonLoading extends StatelessWidget {
       height: 22.r,
       child: CircularProgressIndicator.adaptive(
         backgroundColor: loadingColor,
+
         strokeWidth: 1.8,
       ),
     );

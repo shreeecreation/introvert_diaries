@@ -1,6 +1,6 @@
 class ApiEndpoints {
   // const ApiEndpoints._();
-  static String baseUrl = 'http://13.238.159.224:3000/';
+  static String baseUrl = 'https://dev.api.oydee.app';
 
   static const String feeds = '/api/feed';
   static const String login = '/api/login';

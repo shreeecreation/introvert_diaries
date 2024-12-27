@@ -1,6 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:introvertdiaries/src/core/core.dart';
 import 'package:introvertdiaries/src/features/auth/auth.dart';
+import 'package:lottie/lottie.dart';
 
 @RoutePage<void>()
 class LoginPage extends StatefulWidget {
@@ -55,9 +56,12 @@ class _LoginPageState extends State<LoginPage> {
                   orElse: () {},
                   error: (message) {
                     context.showSnackbar( message: message, error: true);
+                    context.pushRoute(const HomeRoute());
                   },
                   success: (message) {
                     context.showSnackbar(message: message, error: false);
+                    context.pushRoute(const HomeRoute());
+
                   },
                 );
               },
@@ -69,11 +73,15 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Text(
-                        'Introvert Diaries',
-                        style: AppTextStyles.text20PxMedium,
+                      Center(
+                        child: Text(
+                          'Introvert Diaries',
+                          style: AppTextStyles.text24PxMedium,
+                        ),
                       ),
-                      20.verticalSpace,
+                      10.verticalSpace,
+                      Lottie.asset('assets/diary.json',),
+                      40.verticalSpace,
                       SizedBox(
                         width: context.width,
                         // height: 60,

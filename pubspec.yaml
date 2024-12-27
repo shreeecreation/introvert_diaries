@@ -207,4 +207,5 @@ flutter:
 
   assets:
     - assets/country_info.json
+    - assets/diary.json
 
